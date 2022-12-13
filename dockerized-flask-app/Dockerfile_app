@@ -1,0 +1,20 @@
+FROM ubuntu:18.04
+
+WORKDIR /app
+
+EXPOSE 5000
+
+RUN echo "flask morse app" \
+&& echo "YO MON! this is the URL to be used ----->>> http://localhost:5000/morse/type_here_your_translation_candidate" \
+&& apt update \
+&& apt install python3-flask -y
+
+ENV LC_ALL=C.UTF-8
+
+ENV LANG=C.UTF-8
+
+ADD ./app .
+
+RUN ["chmod", "+x", "/app/flask_morse_app_01.py"]
+
+ENTRYPOINT [ "python3", "/app/flask_morse_app_01.py" ]
