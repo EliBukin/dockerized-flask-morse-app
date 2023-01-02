@@ -15,6 +15,10 @@ ENV LANG=C.UTF-8
 
 ADD ./app .
 
+### this was added to fix the errors popping from OpenShift regarding the permissions to write to /app
+RUN chgrp -R 0 /app && \
+    chmod -R g=u /app
+
 RUN ["chmod", "+x", "/app/flask_morse_app_01.py"]
 
 ENTRYPOINT [ "python3", "/app/flask_morse_app_01.py" ]
