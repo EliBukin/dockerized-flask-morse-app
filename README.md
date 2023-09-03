@@ -11,4 +11,4 @@ This repo contains a dockerfile and an application that translates input strings
 
     docker run -d -p 5000:5000
 
-3. now you can navigate to http://<host IP>:5000/morse/<value to translate> and view the app page.
+3. now you can navigate to "http://host IP:5000/morse/value to translate" and view the app page.
