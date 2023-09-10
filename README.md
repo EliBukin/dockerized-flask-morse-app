@@ -1,6 +1,6 @@
 ### Dockerized Flask Morse App. ###
 
-This repo contains a dockerfile and an application that translates input strings to morse code.
+This repo contains a dockerfile and application that translates input strings to morse code.
 
 folder structure:
 
