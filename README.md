@@ -13,6 +13,6 @@ folder structure:
 
 2. run a container from the image:
 
-    docker run -d -p 5000:5000
+    docker run -d -p 5000:5000 ImageID
 
 3. now you can navigate to "http://host-IP:5000/morse/value-to-translate" and view the app page.
